@@ -1,0 +1,20 @@
+{
+  "name": "LiteLLM",
+  "available": true,
+  "port": 4000,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "litellm",
+  "description": "Lightweight LLM proxy for routing and managing model requests.",
+  "tipi_version": 3,
+  "version": "main-stable",
+  "categories": ["utilities"],
+  "short_desc": "Lightweight LLM proxy server compatible with multiple backends.",
+  "author": "BerriAI",
+  "source": "https://github.com/BerriAI/litellm",
+  "website": "https://www.litellm.ai/",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1753377064000,
+  "updated_at": 1753377064000
+}

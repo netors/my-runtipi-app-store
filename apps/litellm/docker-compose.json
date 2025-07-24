@@ -1,0 +1,10 @@
+{
+  "services": [
+    {
+      "name": "litellm",
+      "image": "ghcr.io/berriai/litellm:main-stable",
+      "isMain": true,
+      "internalPort": 4000
+    }
+  ]
+}
