@@ -5,6 +5,15 @@
       "image": "ghcr.io/berriai/litellm:main-stable",
       "isMain": true,
       "internalPort": 4000
+    },
+    {
+      "name": "postgres",
+      "image": "postgres:15",
+      "environment": {
+        "POSTGRES_USER": "litellm",
+        "POSTGRES_PASSWORD": "changeme",
+        "POSTGRES_DB": "litellm"
+      }
     }
   ]
 }

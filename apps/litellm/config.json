@@ -13,7 +13,55 @@
   "author": "BerriAI",
   "source": "https://github.com/BerriAI/litellm",
   "website": "https://www.litellm.ai/",
-  "form_fields": [],
+  "form_fields": [
+    {
+      "name": "LITELLM_MASTER_KEY",
+      "type": "password",
+      "label": "Master Key",
+      "required": true
+    },
+    {
+      "name": "LITELLM_SALT_KEY",
+      "type": "password",
+      "label": "Salt Key",
+      "required": true
+    },
+    {
+      "name": "OPENAI_API_KEY",
+      "type": "password",
+      "label": "OpenAI API Key"
+    },
+    {
+      "name": "ANTHROPIC_API_KEY",
+      "type": "password",
+      "label": "Anthropic API Key"
+    },
+    {
+      "name": "GEMINI_API_KEY",
+      "type": "password",
+      "label": "Gemini API Key"
+    },
+    {
+      "name": "GROQ_API_KEY",
+      "type": "password",
+      "label": "GROQ API Key"
+    },
+    {
+      "name": "UI_USERNAME",
+      "type": "text",
+      "label": "UI Username"
+    },
+    {
+      "name": "UI_PASSWORD",
+      "type": "password",
+      "label": "UI Password"
+    },
+    {
+      "name": "PROXY_ADMIN_ID",
+      "type": "text",
+      "label": "Proxy Admin ID"
+    }
+  ],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1753377064000,
   "updated_at": 1753377064000

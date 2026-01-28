@@ -4,7 +4,7 @@ This is a custom Runtipi App Store. It includes community apps for testing and s
 
 ## Sample Apps
 
-| App      | Description                                           |
-|----------|-------------------------------------------------------|
-| mynginx  | Simple web server for testing your Runtipi installation |
+| App      | Description                                              |
+|----------|----------------------------------------------------------|
+| mynginx  | Simple web server for testing your Runtipi installation  |
 | litellm  | Lightweight LLM proxy server for managing model requests |
