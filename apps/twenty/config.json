@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/runtipi/runtipi-appstore/refs/heads/master/apps/app-info-schema.json",
+  "name": "Twenty",
+  "available": true,
+  "port": 3000,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "twenty",
+  "description": "A modern open-source CRM platform offering a refreshing alternative to Salesforce.",
+  "tipi_version": 3,
+  "version": "0.40.1",
+  "categories": ["utilities"],
+  "short_desc": "Open-source CRM designed for modern businesses.",
+  "author": "Twenty",
+  "source": "https://github.com/twentyhq/twenty",
+  "website": "https://twenty.com/",
+  "form_fields": [
+    {
+      "label": "App Secret",
+      "hint": "Secret key for securing the application",
+      "type": "random",
+      "encoding": "base64",
+      "min": 32,
+      "env_variable": "APP_SECRET"
+    },
+    {
+      "label": "Database Password",
+      "hint": "PostgreSQL password (no special characters)",
+      "type": "random",
+      "min": 32,
+      "env_variable": "PG_DATABASE_PASSWORD"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "min_memory": 2048,
+  "created_at": 1738600000000,
+  "updated_at": 1738600000000
+}
