@@ -5,7 +5,7 @@
     {
       "name": "twenty-server",
       "isMain": true,
-      "image": "twentycrm/twenty:v0.40.1",
+      "image": "twentycrm/twenty:latest",
       "internalPort": 3000,
       "environment": [
         { "key": "PG_DATABASE_URL", "value": "postgres://postgres:${PG_DATABASE_PASSWORD}@twenty-db:5432/default" },
@@ -23,15 +23,12 @@
       ],
       "dependsOn": ["twenty-db", "twenty-redis"],
       "healthCheck": {
-        "test": "curl --fail http://localhost:3000/healthz",
-        "interval": "5s",
-        "timeout": "5s",
-        "retries": 10
+        "test": "curl --fail http://localhost:3000/healthz || exit 1"
       }
     },
     {
       "name": "twenty-worker",
-      "image": "twentycrm/twenty:v0.40.1",
+      "image": "twentycrm/twenty:latest",
       "command": "yarn worker:prod",
       "environment": [
         { "key": "PG_DATABASE_URL", "value": "postgres://postgres:${PG_DATABASE_PASSWORD}@twenty-db:5432/default" },
@@ -53,7 +50,7 @@
     },
     {
       "name": "twenty-db",
-      "image": "twentycrm/twenty-postgres:v0.40.1",
+      "image": "twentycrm/twenty-postgres:latest",
       "environment": [
         { "key": "POSTGRES_USER", "value": "postgres" },
         { "key": "POSTGRES_PASSWORD", "value": "${PG_DATABASE_PASSWORD}" },
@@ -66,10 +63,7 @@
         }
       ],
       "healthCheck": {
-        "test": "pg_isready -U postgres -d default",
-        "interval": "5s",
-        "timeout": "5s",
-        "retries": 10
+        "test": "pg_isready -U postgres -d default || exit 1"
       }
     },
     {
@@ -83,10 +77,7 @@
         }
       ],
       "healthCheck": {
-        "test": "redis-cli ping",
-        "interval": "5s",
-        "timeout": "5s",
-        "retries": 10
+        "test": "redis-cli ping || exit 1"
       }
     }
   ]

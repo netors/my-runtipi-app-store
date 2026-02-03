@@ -8,7 +8,7 @@
   "id": "twenty",
   "description": "A modern open-source CRM platform offering a refreshing alternative to Salesforce.",
   "tipi_version": 3,
-  "version": "0.40.1",
+  "version": "1.16.7",
   "categories": ["utilities"],
   "short_desc": "Open-source CRM designed for modern businesses.",
   "author": "Twenty",
